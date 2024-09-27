@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./survey.css" />
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title">Freelance Service Feedback Survey</h1>
+        <p id="description">Thank you for taking the time to help us improve our services!!!</p>
+    </div>
+    <form id="survey-form">
+        <label class="upper-label" for="name" id="name-label">Name</label>
+        <input class="upper" required id="name" type="text" placeholder="Enter your name" />
+        <label class="upper-label" for="email" id="email-label">Email</label>
+        <input class="upper" required id="email" type="email" placeholder="Enter your Email" />
+        <label class="upper-label" for="number" id="number-label">Age(Optional)</label>
+        <input class="upper" id="number" type="number" placeholder="Age" min="10" max="100" />
+        <div class="radio">
+            <p class="upper-label">How satisfied are you with the delivered project?</p>
+            <label for="first">
+                <input checked class="input-radio" name="delivered" id="first" type="radio" value="Very satisfied" />
+                Very satisfied</label>
+            <label for="second">
+                <input class="input-radio" name="delivered" id="second" type="radio" value="Satisfied" />
+                Satisfied</label>
+            <label for="third">
+                <input class="input-radio" name="delivered" id="third" type="radio" value="Neutral" />
+                Neutral</label>
+            <label for="fourth">
+                <input class="input-radio" name="delivered" id="fourth" type="radio" value="Dissatisfied" />
+                Dissatisfied</label>
+            <label for="fifth">
+                <input class="input-radio" name="delivered" id="fifth" type="radio" value="Very dissatisfied" />
+                Very dissatisfied</label>
+        </div>
+
+        <div class="radio">
+            <p class="upper-label">How likely are you to recommend my services to others?</p>
+            <label for="very_likely">
+                <input checked class="input-radio" name="recommend" id="very_likely" type="radio" value="Very likely" />
+                Very likely</label>
+            <label for="likely">
+                <input class="input-radio" name="recommend" id="likely" type="radio" value="likely" />
+                Likely</label>
+            <label for="neutral">
+                <input class="input-radio" name="recommend" id="neutral" type="radio" value="neutral" />
+                Neutral</label>
+            <label for="unlikely">
+                <input class="input-radio" name="recommend" id="unlikely" type="radio" value="unlikely" />
+                Unlikely</label>
+            <label for="very_unlikely">
+                <input class="input-radio" name="recommend" id="very_unlikely" type="radio" value="very unlikely" />
+                Very unlikely</label>
+        </div>
+
+        <div class="radio" id="select">
+            <label class="upper-label" for="dropdown">What was your preferred communication channel during
+                the project?</p>
+                <select id="dropdown">
+                    <option disabled="" selected="" value="">--- Choose an option --- </option>
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Messaging app">Messaging app (e.g., WhatsApp, Telegram)</option>
+                    <option value="In-app communication">In-app communication (e.g., Fiverr, Upwork)</option>
+                    <option value="Other">Other</option>
+                </select>
+        </div>
+
+        <div id="checkbox" class="radio">
+            <p class="upper-label">Which areas of the service could be improved?</p>
+            <label for="creativity">
+            <input type="checkbox" id="creativity" name="improvement" value="creativity" checked />
+            Creativity</label>
+            <label for="timeliness"><input type="checkbox" id="timeliness" name="improvement" value="timeliness" />
+            Timeliness</label>
+            <label for="pricing"><input type="checkbox" id="pricing" name="improvement" value="pricing" />
+            Pricing</label>
+            <label for="flexibility"><input type="checkbox" id="flexibility" name="improvement" value="flexibility" />
+            Flexibility</label>
+            <label for="quality of work"><input type="checkbox" id="quality of work" name="improvement" value="quality of work" />
+            Quality of work</label>
+        </div>
+
+        <div id="text-area">
+            <p class="upper-label">Please provide any additional comments or suggestions.</p>
+            <textarea id="suggestions"  name="suggestion" placeholder="Enter your comment/suggestion here...."></textarea>
+        </div>
+
+        <button id="submit" type="submit" >SUBMIT</button>
+    </form>
+
+
+</body>
+
+</html>
